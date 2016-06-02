@@ -1,0 +1,12 @@
+{
+  "name": "coordinator",
+  "app_id": "b633cc36",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}
