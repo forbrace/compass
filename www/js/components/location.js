@@ -12,9 +12,9 @@
     ;
 
     //
-    CoordinatorLocationController.$inject = ['$ionicPlatform', '$cordovaGeolocation', 'coordinateToDmsFilter', '$window'];
+    CoordinatorLocationController.$inject = ['$ionicPlatform', '$cordovaGeolocation', 'coordinateToDmsFilter'];
 
-    function CoordinatorLocationController($ionicPlatform, $cordovaGeolocation, coordinateToDmsFilter, $window) {
+    function CoordinatorLocationController($ionicPlatform, $cordovaGeolocation, coordinateToDmsFilter) {
         var vm = this;
 
         vm.loading = false;
@@ -22,6 +22,7 @@
         vm.setType = setType;
         vm.getType = getType;
         vm.isIOS = $ionicPlatform.is('IOS');
+        vm.$onDestroy = $onDestroy;
 
         function setType(newType) {
             vm.type = newType;
@@ -78,6 +79,10 @@
                 });
 
 
+            //watch.clearWatch();
+        }
+
+        function $onDestroy() {
             watch.clearWatch();
         }
 
