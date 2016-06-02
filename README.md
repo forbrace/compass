@@ -1,7 +1,9 @@
 Ionic Compass App
 =====================
 
-A geolocation app that shows latitude and longitude in dms/deg format.
+A geolocation compass app that shows latitude and longitude in dms/deg format.
+
+<img src="https://dl.dropboxusercontent.com/u/3841253/compas-screenshot.png" width="320" height="568" alt="ionic compas app screenshot" />
 
 ## Using this project
 
