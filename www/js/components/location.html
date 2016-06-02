@@ -32,7 +32,7 @@
 
     <div ng-if="!$ctrl.loading && $ctrl.error"></div>
 
-    <div ng-if="!($ctrl.lat && $ctrl.lng)">
+    <div ng-if="!$ctrl.loading && !($ctrl.lat && $ctrl.lng)">
         <div class="assertive">
             Enable Geolocation first and then click the button
         </div>
