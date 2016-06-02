@@ -1,5 +1,5 @@
 {
-  "name": "coordinator",
+  "name": "compas",
   "app_id": "b633cc36",
   "gulpStartupTasks": [
     "sass",

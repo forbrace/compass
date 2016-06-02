@@ -10,9 +10,13 @@ A geolocation app that shows latitude and longitude in dms/deg format.
 $ npm install -g cordova ionic
 ```
 
-### 2. Add Geolocation plugin
+### 2. Add plugins
 ```
 $ cordova plugin add cordova-plugin-geolocation
+```
+
+```
+$ cordova plugin add cordova-plugin-device-orientation
 ```
 
 ### 3. Run it
