@@ -22,15 +22,15 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 //TODO: move to separate files
-.coordinator-body {
+.compass-body {
     //color: #fff;
 }
 
-.coordinator-home-pane {
+.compass-home-pane {
     //background: #002e58;
 }
 
-.coordinator-home-content {
+.compass-home-content {
     //@include display-flex();
     //@include justify-content(center);
     //@include align-items(center);
@@ -40,18 +40,13 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     //}
 }
 
-.coordinator-location {
-    //@extend .h5;
-    //color: #fff;
-    //margin: 0;
+.compass-location {
     font-weight: bold;
 }
 
-.coordinator-spinner svg {
+.compass-spinner svg {
     width: 60px;
     height: 60px;
-    //stroke: #fff;
-    //fill: #fff;
 }
 
 .content-location {
@@ -61,6 +56,20 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
     .card {
         margin-top: 10px;
     }
+}
+
+//compass
+$compass-size: 180px !default;
+
+.compass-compass-image {
+    width: $compass-size;
+    height: $compass-size;
+    display: block;
+    margin: 0 auto;
+}
+
+.compass-compass-arrow {
+    @include transition(all .2s ease-in-out);
 }
 
 

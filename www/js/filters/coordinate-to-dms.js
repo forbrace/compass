@@ -4,7 +4,7 @@
 (function () {
     'use strict';
 
-    angular.module('coordinator')
+    angular.module('compass')
         .filter('coordinateToDms', coordinateToDms)
     ;
 

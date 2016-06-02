@@ -4,17 +4,17 @@
 (function () {
     'use strict';
 
-    angular.module('coordinator')
-        .component('coordinatorLocation', {
+    angular.module('compass')
+        .component('compassLocation', {
             templateUrl: 'js/components/location.html',
-            controller: CoordinatorLocationController
+            controller: CompassLocationController
         })
     ;
 
     //
-    CoordinatorLocationController.$inject = ['$ionicPlatform', '$cordovaGeolocation', 'coordinateToDmsFilter'];
+    CompassLocationController.$inject = ['$ionicPlatform', '$cordovaGeolocation'];
 
-    function CoordinatorLocationController($ionicPlatform, $cordovaGeolocation, coordinateToDmsFilter) {
+    function CompassLocationController($ionicPlatform, $cordovaGeolocation) {
         var vm = this;
 
         vm.loading = false;

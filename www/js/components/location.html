@@ -1,73 +1,70 @@
-<div id="map" class="pane"></div>
+<div class="compass-location text-center padding">
 
-<div class="content content-location padding has-header has-tabs">
+    <ion-spinner icon="ripple" class="compass-spinner" ng-if="$ctrl.loading"></ion-spinner>
 
-    <div class="button-bar bar-stable">
+    <div ng-if="!$ctrl.loading && $ctrl.lat && $ctrl.lng">
+        <div ng-switch="$ctrl.type">
+            <div ng-switch-when="dms">
 
-        <a href class="button"
-           ng-click="$ctrl.setType('dms')"
-           ng-class="{active: $ctrl.type === 'dms'}">DMS</a>
-
-        <a href class="button"
-           ng-click="$ctrl.setType('deg')"
-           ng-class="{active: $ctrl.type === 'deg'}">DEG</a>
-
-    </div>
-
-    <div class="card">
-        <div class="item item-text-wrap text-center">
-
-            <div class="coordinator-location">
-
-                <ion-spinner icon="ripple" class="coordinator-spinner" ng-if="$ctrl.loading"></ion-spinner>
-
-                <div ng-if="!$ctrl.loading && $ctrl.lat && $ctrl.lng">
-                    <div ng-switch="$ctrl.type">
-                        <div ng-switch-when="dms">
-                            <div>
-                                {{$ctrl.lat | coordinateToDms:'lat'}}
-                            </div>
-                            <div>
-                                {{$ctrl.lng | coordinateToDms:'lng'}}
-                            </div>
-                        </div>
-                        <div ng-switch-when="deg">
-                            <div>
-                                {{$ctrl.lat}}
-                            </div>
-                            <div>
-                                {{$ctrl.lng}}
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    {{$ctrl.lat | coordinateToDms:'lat'}}
                 </div>
 
-                <div ng-if="!$ctrl.loading && $ctrl.error"></div>
+                <div>
+                    {{$ctrl.lng | coordinateToDms:'lng'}}
+                </div>
 
-                <div ng-if="!($ctrl.lat && $ctrl.lng)">
-                    <div class="assertive">
-                        Enable Geolocation first and then click the button
-                    </div>
-                    <button ng-click="$ctrl.startGelocation()" class="button button-full button-light">Get location</button>
+
+            </div>
+            <div ng-switch-when="deg">
+
+                <div>
+                    {{$ctrl.lat}}
+                </div>
+
+                <div>
+                    {{$ctrl.lng}}
                 </div>
 
             </div>
-
-            <div class="padding-top" ng-if="!$ctrl.loading && $ctrl.lat && $ctrl.lng">
-
-                <a ng-if="$ctrl.isIOS"
-                   target="_blank"
-                   ng-href="http://maps.apple.com/?ll={{$ctrl.lat}},{{$ctrl.lng}}&z=16"
-                   class="button button-stable button-small">View in Apple Maps</a>
-
-                <a ng-if="!$ctrl.isIOS"
-                   target="_blank"
-                   ng-href="https://maps.google.com/maps?q={{$ctrl.lat}},{{$ctrl.lng}}&z=16"
-                   class="button button-stable button-small">View in Google Maps</a>
-
-            </div>
-
         </div>
     </div>
 
+    <div ng-if="!$ctrl.loading && $ctrl.error"></div>
+
+    <div ng-if="!($ctrl.lat && $ctrl.lng)">
+        <div class="assertive">
+            Enable Geolocation first and then click the button
+        </div>
+        <button ng-click="$ctrl.startGelocation()" class="button button-full button-light">Get location</button>
+    </div>
+
 </div>
+
+
+<div class="button-bar bar-stable">
+
+    <a href class="button button-small"
+       ng-click="$ctrl.setType('dms')"
+       ng-class="{active: $ctrl.type === 'dms'}">DMS</a>
+
+    <a href class="button button-small"
+       ng-click="$ctrl.setType('deg')"
+       ng-class="{active: $ctrl.type === 'deg'}">DEG</a>
+
+</div>
+
+<div ng-if="!$ctrl.loading && $ctrl.lat && $ctrl.lng">
+
+    <a ng-if="$ctrl.isIOS"
+       target="_blank"
+       ng-href="http://maps.apple.com/?ll={{$ctrl.lat}},{{$ctrl.lng}}&z=16"
+       class="button button-stable button-full button-small">View in Apple Maps</a>
+
+    <a ng-if="!$ctrl.isIOS"
+       target="_blank"
+       ng-href="https://maps.google.com/maps?q={{$ctrl.lat}},{{$ctrl.lng}}&z=16"
+       class="button button-stable button-full button-small">View in Google Maps</a>
+
+</div>
+

@@ -9815,10 +9815,10 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-.coordinator-location {
+.compass-location {
   font-weight: bold; }
 
-.coordinator-spinner svg {
+.compass-spinner svg {
   width: 60px;
   height: 60px; }
 
@@ -9827,3 +9827,13 @@ a.button {
   z-index: 2; }
   .content-location .card {
     margin-top: 10px; }
+
+.compass-compass-image {
+  width: 180px;
+  height: 180px;
+  display: block;
+  margin: 0 auto; }
+
+.compass-compass-arrow {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }

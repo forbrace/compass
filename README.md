@@ -1,4 +1,4 @@
-Ionic App Coordinator
+Ionic Compass App
 =====================
 
 A geolocation app that shows latitude and longitude in dms/deg format.
