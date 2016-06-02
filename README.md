@@ -21,7 +21,7 @@ $ cordova plugin add cordova-plugin-geolocation
 $ cordova plugin add cordova-plugin-device-orientation
 ```
 
-### 3. Run it
+### 3. Deploying
 ```
 $ ionic platform add ios
 ```
@@ -30,13 +30,13 @@ $ ionic platform add ios
 $ ionic build ios
 ```
 
-Run on emulator
+Emulator
 
 ```
 $ ionic emulate ios
 ```
 
-or on real device
+Device
 
 ```
 $ ionic run ios --device
