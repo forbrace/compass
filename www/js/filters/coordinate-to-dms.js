@@ -1,5 +1,6 @@
 /**
  * Created by dm on 6/1/16.
+ * TODO: Cover with tests
  */
 (function () {
     'use strict';
@@ -30,7 +31,10 @@
             var minutes = Math.abs(parseInt(60 * (Math.abs(coord) - Math.abs(deg))));
             var seconds = 3600 * (Math.abs(coord) - Math.abs(deg) - Math.abs(minutes) / 60);
 
-            return parseInt(coord) + '˚' + minutes + '′' + Math.round(seconds * 100) / 100 + '″' + hemisphere;
+            var minutesFormatted = ('0'+minutes).slice(-2);
+            var secondsFormatted = ('0'+Math.round(seconds * 100) / 100).slice(-5);
+
+            return parseInt(coord) + '˚' + minutesFormatted + '′' + secondsFormatted + '″' + hemisphere;
 
         }
     }

@@ -1,5 +1,6 @@
 /**
  * Created by dm on 6/1/16.
+ * TODO: Cover with tests
  */
 (function () {
     'use strict';

@@ -23,25 +23,20 @@
     <script src="js/components/orientation.js"></script>
     <script src="js/filters/coordinate-to-dms.js"></script>
 </head>
-<body ng-app="compass" class="compass-body">
+<body ng-app="compass">
 
 <ion-view class="home">
 
 
-    <ion-pane class="compass-home-pane">
-        <!--<ion-content class="text-center compass-home-content">-->
-
-
-
-        <!--</ion-content>-->
-
-        <div class="content content-location padding has-header has-tabs">
+    <ion-pane>
+        <ion-content class="content content-location padding has-header has-tabs">
 
             <compass-orientation></compass-orientation>
 
             <compass-location></compass-location>
 
-        </div>
+        </ion-content>
+
 
 
     </ion-pane>

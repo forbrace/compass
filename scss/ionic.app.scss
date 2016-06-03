@@ -22,24 +22,6 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "www/lib/ionic/scss/ionic";
 
 //TODO: move to separate files
-.compass-body {
-    //color: #fff;
-}
-
-.compass-home-pane {
-    //background: #002e58;
-}
-
-.compass-home-content {
-    //@include display-flex();
-    //@include justify-content(center);
-    //@include align-items(center);
-    //
-    //> .scroll {
-    //    @include flex(1, 1, auto);
-    //}
-}
-
 .compass-location {
     font-weight: bold;
 }

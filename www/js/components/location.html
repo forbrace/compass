@@ -5,25 +5,16 @@
         <div class="padding" ng-switch="$ctrl.type">
             <div ng-switch-when="dms">
 
-                <div>
-                    {{$ctrl.lat | coordinateToDms:'lat'}}
-                </div>
-
-                <div>
-                    {{$ctrl.lng | coordinateToDms:'lng'}}
-                </div>
-
+                {{$ctrl.lat | coordinateToDms:'lat'}}
+                &nbsp;&nbsp;
+                {{$ctrl.lng | coordinateToDms:'lng'}}
 
             </div>
             <div ng-switch-when="deg">
 
-                <div>
-                    {{$ctrl.lat}}
-                </div>
-
-                <div>
-                    {{$ctrl.lng}}
-                </div>
+                {{$ctrl.lat | number:7}}
+                &nbsp;&nbsp;
+                {{$ctrl.lng | number:7}}
 
             </div>
         </div>
@@ -46,7 +37,7 @@
                 <a ng-if="$ctrl.isIOS"
                    target="_blank"
                    ng-href="http://maps.apple.com/?ll={{$ctrl.lat}},{{$ctrl.lng}}&z=16"
-                   class="">View in Apple Maps</a>
+                   class="">View in Maps App</a>
 
                 <a ng-if="!$ctrl.isIOS"
                    target="_blank"
@@ -68,7 +59,8 @@
     </div>
     <div ng-if="!$ctrl.lat && !$ctrl.lng">
         <button ng-click="$ctrl.startGelocation()"
-                class="button button-full button-light">Get location</button>
+                class="button button-full button-light">Get location
+        </button>
     </div>
 </div>
 
