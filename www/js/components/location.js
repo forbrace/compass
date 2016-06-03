@@ -12,9 +12,9 @@
     ;
 
     //
-    CompassLocationController.$inject = ['$ionicPlatform', '$cordovaGeolocation'];
+    CompassLocationController.$inject = ['$ionicPlatform', '$cordovaGeolocation', '$ionicLoading'];
 
-    function CompassLocationController($ionicPlatform, $cordovaGeolocation) {
+    function CompassLocationController($ionicPlatform, $cordovaGeolocation, $ionicLoading) {
         var vm = this;
 
         vm.loading = false;
@@ -43,17 +43,24 @@
         function startGelocation() {
 
             vm.loading = true;
+            $ionicLoading.show({
+                template: 'Getting location…'
+            });
 
             var posOptions = {timeout: 10000, enableHighAccuracy: true};
             $cordovaGeolocation
                 .getCurrentPosition(posOptions)
                 .then(function (position) {
-                    vm.loading = false;
                     vm.lat = position.coords.latitude;
                     vm.lng = position.coords.longitude;
+
+                    vm.loading = false;
+                    $ionicLoading.hide();
+
                 }, function (err) {
                     // error
                     vm.loading = false;
+                    $ionicLoading.hide();
                     vm.error = err;
                 });
 
@@ -71,11 +78,15 @@
                     // error
                     vm.error = err;
                     vm.loading = false;
+                    $ionicLoading.hide();
                 },
                 function (position) {
-                    vm.loading = false;
                     vm.lat = position.coords.latitude;
                     vm.lng = position.coords.longitude;
+
+                    vm.loading = false;
+                    $ionicLoading.hide();
+
                 });
 
 

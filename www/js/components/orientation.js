@@ -18,10 +18,6 @@
         var vm = this;
         vm.$onDestroy = $onDestroy;
 
-        //vm.magneticHeading = 0;
-        //cardinalDirection();
-        //vm.orientation = true;
-
         // Device Orientation plugin
 
         $ionicPlatform.ready(function(){

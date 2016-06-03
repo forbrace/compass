@@ -607,13 +607,13 @@
     </svg>
 </div>
 
-<h1 ng-if="$ctrl.orientation" class="padding">
-    <span class="row">
+<h1 class="padding">
+    <span class="row row-no-padding">
         <span class="col col-50 text-right">
-            {{$ctrl.magneticHeading | number:0}}˚
+            &nbsp; <span ng-if="$ctrl.orientation">{{$ctrl.magneticHeading | number:0}}˚</span>
         </span>
         <span class="col col-50 text-left">
-            {{$ctrl.cardinalDirection}}
+            <span ng-if="$ctrl.orientation">{{$ctrl.cardinalDirection}}&nbsp;</span>
         </span>
     </span>
 </h1>
