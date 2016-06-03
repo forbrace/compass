@@ -35,12 +35,10 @@
 
             <div class="padding-top">
                 <a ng-if="$ctrl.isIOS"
-                   target="_blank"
                    ng-href="http://maps.apple.com/?ll={{$ctrl.lat}},{{$ctrl.lng}}&z=16"
                    class="">View in Maps App</a>
 
                 <a ng-if="!$ctrl.isIOS"
-                   target="_blank"
                    ng-href="https://maps.google.com/maps?q={{$ctrl.lat}},{{$ctrl.lng}}&z=16"
                    class="">View in Google Maps</a>
             </div>
@@ -50,8 +48,6 @@
     </div>
 
 </div>
-
-
 
 <div ng-if="!$ctrl.loading" class="text-center">
     <div class="assertive padding-bottom" ng-if="!$ctrl.lat && !$ctrl.lng">

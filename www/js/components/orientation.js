@@ -38,6 +38,7 @@
             }, function(err) {
                 // An error occurred
                 vm.orientation = false;
+                vm.error = err;
             });
 
 
@@ -52,6 +53,7 @@
                 function(error) {
                     // An error occurred
                     vm.orientation = false;
+                    vm.error = err;
                 },
                 function(result) {   // updates constantly (depending on frequency value)
 
