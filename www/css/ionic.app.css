@@ -9837,3 +9837,7 @@ a.button {
 .compass-compass-arrow {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
+
+.compass-compass-heading {
+  font-size: 50px;
+  font-family: monospace; }
