@@ -34,12 +34,9 @@
         }
 
         // Geolocation plugin
-        //vm.$onInit = startGelocation;
         vm.startGelocation = startGelocation;
 
-        $ionicPlatform.ready(function(){
-            startGelocation();
-        });
+        startGelocation();
 
         function startGelocation() {
 
@@ -90,8 +87,6 @@
 
                 });
 
-
-            //watch.clearWatch();
         }
 
         function $onDestroy() {

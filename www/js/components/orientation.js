@@ -21,9 +21,7 @@
 
         // Device Orientation plugin
 
-        $ionicPlatform.ready(function(){
-            startOrientation();
-        });
+        startOrientation();
 
         function startOrientation() {
 

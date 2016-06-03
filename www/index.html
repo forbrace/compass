@@ -22,8 +22,15 @@
     <script src="js/components/location.js"></script>
     <script src="js/components/orientation.js"></script>
     <script src="js/filters/coordinate-to-dms.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener('deviceready', function onDeviceReady() {
+            angular.bootstrap(document, ['compass']);
+        }, false);
+    </script>
+
 </head>
-<body ng-app="compass">
+<body>
 
 <ion-view class="home">
 
