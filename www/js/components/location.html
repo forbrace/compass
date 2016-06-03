@@ -54,12 +54,12 @@
 
 
 <div ng-if="!$ctrl.loading" class="text-center">
-    <div class="assertive" ng-if="!$ctrl.lat && !$ctrl.lng">
+    <div class="assertive padding-bottom" ng-if="!$ctrl.lat && !$ctrl.lng">
         &nbsp; Enable Geolocation first and then click the button &nbsp;
     </div>
     <div ng-if="!$ctrl.lat && !$ctrl.lng">
         <button ng-click="$ctrl.startGelocation()"
-                class="button button-full button-light">Get location
+                class="button button-positive">Get location
         </button>
     </div>
 </div>
