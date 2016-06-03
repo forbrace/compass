@@ -21,7 +21,9 @@
 
         // Device Orientation plugin
 
-        startOrientation();
+        $ionicPlatform.ready(function() {
+            startOrientation();
+        });
 
         function startOrientation() {
 
@@ -50,7 +52,7 @@
 
             var watch = $cordovaDeviceOrientation.watchHeading(options).then(
                 null,
-                function(error) {
+                function(err) {
                     // An error occurred
                     vm.orientation = false;
                     vm.error = err;

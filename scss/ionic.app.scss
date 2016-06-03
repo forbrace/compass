@@ -41,22 +41,38 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 }
 
 //compass
-$compass-size: 180px !default;
+$compass-size: 200px !default;
+
+.compass-compass-figure {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: $compass-size;
+    height: $compass-size;
+}
 
 .compass-compass-image {
     width: $compass-size;
     height: $compass-size;
-    display: block;
-    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
 
 .compass-compass-arrow {
-    @include transition(all .2s ease-in-out);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $compass-size;
+    height: $compass-size;
+    z-index: 2;
 }
 
 .compass-compass-heading {
-    font-size: 50px;
     font-family: monospace;
+    margin: 30px 0 20px 0;
+    font-size: 54px;
 }
 
 
