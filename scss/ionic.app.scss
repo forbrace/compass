@@ -72,4 +72,8 @@ $compass-size: 180px !default;
     @include transition(all .2s ease-in-out);
 }
 
+.compass-compass-heading {
+    font-size: 50px;
+}
+
 
