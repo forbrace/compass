@@ -9849,9 +9849,14 @@ a.button {
   top: 0;
   width: 200px;
   height: 200px;
-  z-index: 2; }
+  z-index: 2;
+  -webkit-transition: all 1000/60ms linear;
+  transition: all 1000/60ms linear; }
 
 .compass-compass-heading {
   font-family: monospace;
   margin: 30px 0 20px 0;
   font-size: 54px; }
+
+.text-monospace {
+  font-family: monospace; }
