@@ -11,6 +11,9 @@ Supports latitude/longitude in dms/deg format and magnetic north.
 ### 1. Install Ionic
 
     $ npm install -g cordova ionic
+
+Clone, ` cd ` to ` /compass ` folder and run
+
     $ ionic platform add ios
 
 ### 2. Add plugins
