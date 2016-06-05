@@ -10,6 +10,7 @@ A hybrid <a href="http://ionicframework.com/">Ionic</a> compass app (ios/android
 ### 1. Install Ionic
 
     $ npm install -g cordova ionic
+    $ ionic platform add ios
 
 ### 2. Add plugins
 
@@ -17,17 +18,23 @@ A hybrid <a href="http://ionicframework.com/">Ionic</a> compass app (ios/android
     $ cordova plugin add cordova-plugin-device-orientation
 
 ### 3. Deploying
+ 
+You can use the <a href="https://apps.ionic.io/apps">Ionic View app</a> and view the app via <code>$ ionic upload</code>. 
 
-    $ ionic platform add ios
+
+Build 
+
     $ ionic build ios
 
-Emulator
+Emulator run
 
     $ ionic emulate ios
 
-Device
+Device run
 
     $ ionic run ios --device
+    
+Or open the resulting XCode project from platforms/ios
 
 ### 4. Development
  
