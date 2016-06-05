@@ -20,7 +20,6 @@ describe('Filter: Convert lat/lng to DMS', function() {
     });
 
     it('should filter the parameters passed', function(){
-        console.log(dmsFilter(-2.419416, 'lat'));
 
         expect(dmsFilter(0, 'lat')).toBe('0˚00′00″');
         expect(dmsFilter(0, 'lng')).toBe('0˚00′00″');
@@ -37,7 +36,7 @@ describe('Filter: Convert lat/lng to DMS', function() {
         expect(dmsFilter(37.774929, 'lat')).toBe('37˚46′29.74″N');
         expect(dmsFilter(-122.419416, 'lng')).toBe('122˚25′09.9″W');
 
-        // San Francisco
+        // San Paolo
         expect(dmsFilter(-23.55052, 'lat')).toBe('23˚33′01.87″S');
         expect(dmsFilter(-46.633309, 'lng')).toBe('46˚37′59.91″W');
     });
