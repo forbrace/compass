@@ -1,7 +1,7 @@
 Ionic Compass App
 =====================
 
-A hybrid <a href="http://ionicframework.com/">Ionic</a> compass app (ios/android) with latitude and longitude in dms/deg format.
+A hybrid <a href="http://ionicframework.com/">Ionic</a> compass app (IOS tested only) with latitude and longitude in dms/deg format.
 
 <img src="https://dl.dropboxusercontent.com/u/3841253/compas-screenshot.png" width="320" height="568" alt="ionic compas app screenshot" />
 
