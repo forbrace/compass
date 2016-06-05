@@ -21,10 +21,10 @@
             var hemisphere = '';
 
             if (type === 'lat') {
-                hemisphere = coord > 0 ? 'N' : 'S';
+                hemisphere = coord > 0 ? 'N' : (coord < 0 ? 'S' : '');
             }
             if (type === 'lng') {
-                hemisphere = coord > 0 ? 'E' : 'W';
+                hemisphere = coord > 0 ? 'E' : (coord < 0 ? 'W' : '');
             }
 
             var deg = parseInt(coord);
@@ -34,7 +34,7 @@
             var minutesFormatted = ('0'+minutes).slice(-2);
             var secondsFormatted = ('0'+Math.round(seconds * 100) / 100).slice(-5);
 
-            return parseInt(coord) + '˚' + minutesFormatted + '′' + secondsFormatted + '″' + hemisphere;
+            return Math.abs(parseInt(coord)) + '˚' + minutesFormatted + '′' + secondsFormatted + '″' + hemisphere;
 
         }
     }

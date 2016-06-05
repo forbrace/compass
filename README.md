@@ -41,6 +41,26 @@ Device run
 Or open the resulting XCode project from platforms/ios
 
 ### 4. Development
+
+Environment setup to do some testing
+
+    $ npm install karma --save-dev
+    $ npm install karma-phantomjs-launcher --save-dev
+    $ npm install phantomjs-prebuilt --save-dev
+    $ npm install jasmine-core --save-dev
+    $ npm install karma-jasmine --save-dev
+    $ bower install angular-mocks --save-dev
+    $ karma init karma.config.js
+    
+Run tests
+
+    karma start karma.config.js
+
+Add Sass support
+
+    $ ionic setup sass
+
+Serve
  
     $ ionic serve
 

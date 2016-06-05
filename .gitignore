@@ -2,6 +2,7 @@
 # http://git-scm.com/docs/gitignore
 
 .idea
+www/lib
 .DS_Store
 bower_components/
 .sass-cache/
