@@ -1,7 +1,8 @@
 Ionic Compass App
 =====================
 
-A hybrid <a href="http://ionicframework.com/">Ionic</a> compass app (IOS tested only) with latitude and longitude in dms/deg format.
+Compass application for IOS written in <a href="http://ionicframework.com/">Ionic</a> (AngularJS, CSS, HTML). 
+Supports latitude/longitude in dms/deg format and magnetic north. 
 
 <img src="https://dl.dropboxusercontent.com/u/3841253/compas-screenshot.png" width="320" height="568" alt="ionic compas app screenshot" />
 
