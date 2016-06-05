@@ -39,6 +39,9 @@ describe('Filter: Convert lat/lng to DMS', function() {
         // San Paolo
         expect(dmsFilter(-23.55052, 'lat')).toBe('23˚33′01.87″S');
         expect(dmsFilter(-46.633309, 'lng')).toBe('46˚37′59.91″W');
+
+        expect(dmsFilter(-122.419444, 'lng')).toBe('122˚25′10″W');
+        //console.log(dmsFilter(-88.419444, 'lat'));
     });
 
 });

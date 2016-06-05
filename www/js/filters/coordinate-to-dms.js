@@ -28,13 +28,15 @@
             }
 
             var deg = parseInt(coord);
-            var minutes = Math.abs(parseInt(60 * (Math.abs(coord) - Math.abs(deg))));
-            var seconds = 3600 * (Math.abs(coord) - Math.abs(deg) - Math.abs(minutes) / 60);
+            var minutes = Math.abs( parseInt( 60 * (Math.abs(coord) - Math.abs(deg) ), 10) );
+            var seconds = 3600 * ( Math.abs(coord) - Math.abs(deg) - Math.abs(minutes) / 60 );
+
+            var roundedSec = Math.round(seconds * 100) / 100;
 
             var minutesFormatted = ('0'+minutes).slice(-2);
-            var secondsFormatted = ('0'+Math.round(seconds * 100) / 100).slice(-5);
+            var secondsFormatted = roundedSec < 10 ? '0'+roundedSec : ''+roundedSec;
 
-            return Math.abs(parseInt(coord)) + '˚' + minutesFormatted + '′' + secondsFormatted + '″' + hemisphere;
+            return Math.abs(parseInt(coord, 10)) + '˚' + minutesFormatted + '′' + secondsFormatted + '″' + hemisphere;
 
         }
     }
